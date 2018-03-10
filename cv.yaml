@@ -1,0 +1,202 @@
+name:
+  first: Rob
+  last: Harrigan
+phone: ""
+email: rob.harrigan89@gmail.com
+pdf: /data/cv.pdf
+src: https://github.com/Raab70/cv
+url: "unsupervisedpandas.com"
+social:
+  github: Raab70
+  twitter: RobHarrigan89
+  linkedin: rharrigan
+  google_scholar: bqtkH04AAAAJ
+# Erdős number is at most 4.
+# (Robert L. Harrigan -> Bennett Landman -> Min Chen -> Douglas B. West -> Paul Erdős )
+# Djikstra number is at most 5.
+# (Robert L. Harrigan -> Bennett Landman -> Sébastien Ourselin -> Nikos Chrisochoides -> John R. Rice -> Edsger W. Dijkstra)
+
+# LaTeX formatting.
+style: banking # casual, classic, oldstyle, or banking
+color: blue # blue, orange, green, red, purple, grey and black
+color2: '0.25,0.25,0.25' # Make the font under the name a darker grey.
+
+# (tag, section type, title)
+order:
+  - [about, NONE]
+  - [news, News]
+  # - [NEWPAGE, NEWPAGE]  # Ignore newpages since we're just using the markdown for the site
+  - [industry, Work Experience]
+  - [projects, Projects]
+  - [skills, Skills]
+
+  - [education, Education]
+  - [selected_publications, Selected Publications]
+  - [honors, Honors \& Awards]
+
+  - [teaching, Teaching Experience]
+  - [all_publications, All Publications]
+#  - [activities, Activities]
+
+resume_order:
+  - [about, NONE]
+  - [industry, Work Experience]
+  - [projects, Projects]
+  - [skills, Skills]
+  - [education, Education]
+
+
+about: '
+  I am a passionate data scientist who believes in data-driven decision making
+  and empowering executives with actionable facts.
+  I focus on bridging the gap between
+  data science and data engineering,
+  utilizing modern design patterns for cloud-based and
+  containerized workflows to maximize data science impact.
+  I currently work for CBS Interactive and 247Sports.com
+  <br>'
+
+industry:
+  - place: CBS Interactive -- 247Sports.com
+    location: Brentwood, Tennessee
+    title: Data Engineer
+    dates: Apr 2017 -- Present
+    details:
+      - Created serverless personalized recommendation engine using PySpark to get recommendations for >2 million users for a few dollars
+      - Seamlessly moved analytics from custom PHP+MySQL application to AWS Kinesis streaming while maintaining business reporting
+      - Created machine learning spam detection algorithm using Naive Bayes TF-IDF classifier, deployed to production
+      - Wrote chatbot to interface with analytics giving publishers real-time query insights into their page metrics
+      - Extended chatbot to work with goal based bonus incentive structure, allowing publishers to track goal progress in real-time
+      - Created a serverless sessionization pipeline using AWS Lambda and AWS Elasticache (redis) to meet business needs of reporting session-level traffic metrics
+      - Field business reporting requests in a timely manner
+      - Interface with central Applied Machine Learning Group within broader CBSi working on recommendation algorithms and deployment to Kubernetes and GCP
+  - place: Vanderbilt University Department of Electrical Engineering and Computer Science
+    location: Nashville, Tennessee
+    title: Graduate Research Assistant
+    dates: Aug 2014 -- Mar 2017
+    details:
+      - Development of novel fully automated optic nerve segmentation, measurement algorithms in MATLAB
+      - Deployment of algorithm using open source Python cluster manager (DAX) to process >11,000 clinical and research image volumes across self-maintained compute grid and university supercomputing resources
+  - place: Integrity Applications Inc.
+    location: Chantilly, Virginia
+    title: Imaging Science Intern
+    dates: Jun 2010 -- Aug 2010 and Jun 2012 -- Aug 2012
+    details:
+      - Multi-scale target detection algorithm design utilizing low spatial resolution (30m-250m) multispectral and high spatial resolution imagery (15m) to improve detection results using IDL/ENVI and Perl
+      - Cloud detection and mosaicking for application of algorithms for generation of large-scale deliverable maps
+  # - place: Goodrich Corporation
+  #   location: Westford, Massachusetts
+  #   title: Imaging Science Coop
+  #   dates: Mar 2011 -- Aug 2011
+  #   details:
+  #     - Ongoing image quality analysis program development for multiple in-theatre and development sensors including geolocational accuracy, NIIRs assessment and maintenance scheduling.
+
+news:
+  - date: Nov 2017
+    info: "I attended AWS re:Invent 2017 in Las Vegas, Nevada"
+  - date: Apr 2017
+    info: "I began working at 247Sports.com at CBS Interactive"
+  - date: Mar 2017
+    info: "I successfully defended my PhD in Electrical Engineering from Vanderbilt Univeristy entitled \"Optic Nerve Characterization using Magnetic Resonance Imaging: The Search for Biomarkers\" under the supervision of <a href='https://my.vanderbilt.edu/masi/people/bennett-landman-ph-d/'>Dr. Bennett Landman (Electrical Engineering)</a> and <a href='https://www.vuiis.vanderbilt.edu/bio/seth.smith'>Dr. Seth Smith (Radiology and Biomedical Engineering)</a>."
+  - date: Feb 2017
+    info: "I attended SPIE Medical Imaging in Orlando, FL"
+
+projects:
+  - name: Personal Blog and Website
+    url: https://unsupervisedpandas.com
+    details:
+      - Hosted on GitHub Pages. Uses {\bf Markdown} for posts and {\bf Jekyll}
+          for static HTML generation.
+      - Uses AWS Route53 for custom DNS resolution as well as Cloudflare CDN
+      - Includes posts on data science and data engineering topics including serverless, AWS Lambda, and Docker.
+  - name: GitHub Portfolio
+    url: http://github.com/Raab70
+    details:
+      - Hosts code samples, original source code, and patches for
+        open source projects.
+      - Open source contributor to multiple projects including matplotlib
+  - name: NSS Partnership
+    url: http://nashvillesoftwareschool.com/programs/data-science
+    details:
+      - Designed project for NSS Data Science track
+      - Provided data and AWS cloud setup for students
+      - Instructed students on working with big data in the cloud using PySpark on AWS EMR.
+
+skills:
+  - title: Languages
+    details: Python, Bash, terraform, chef, Ruby, SQL
+  - title: Frameworks
+    details: NumPy, Pandas, matplotlib, seaborn, scikit-learn, SciPy, TensorFlow
+  - title: Technologies
+    details: Kubernetes, Docker, AWS, Google Cloud
+
+
+education:
+  - school: Vanderbilt University
+    location: Nashville, Tennessee
+    degree: Ph.D. in Electrical Engineering
+    dates: Aug 2013 -- Mar 2017
+
+  - school: The University of Tennessee at Martin
+    location: Martin, Tennessee
+    degree: Master's in Business Administration
+    dates: Aug 2011 -- May 2013
+
+  - school: Rochester Institute of Technology
+    location: Henrietta, New York
+    degree: B.S. in Imaging Science
+    dates: Aug 2007 -- Feb 2011
+
+teaching:
+  - semester: Fall 2015
+    name: Vanderbilt University
+    short: VU Athletics
+    position: Tutor
+  - semester: Spring 2014
+    name: Digital Signal Processing
+    short: EECE256
+    position: TA
+  - semester: Spring 2013
+    name: Image Processing
+    short: EECE253
+    position: TA
+  - semester: Spring 2008 -- Spring 2011
+    name: RIT Academic Support Center
+    short: Drop in calculus and physics tutoring
+    position: Lead Tutor
+
+selected_publications:
+  name: "R. Harrigan"
+  file: selected.bib
+
+all_publications:
+  name: "R. Harrigan"
+  categories:
+    - heading: Journal Articles
+      prefix: J
+      file: journal.bib
+    - heading: Conference Proceedings
+      prefix: C
+      file: conference.bib
+    - heading: Posters
+      prefix: S
+      file: posters.bib
+
+honors:
+  - title: NEI T32 Training Grant Award
+    year: 2014 -- 2017
+  - title: ISMRM Trainee Educational Stipend Award Winner
+    year: 2015
+  - title: UT Martin Faculty Scholar
+    year: 2012 and 2013
+  - title: RIT Outstanding Undergraduate Scholar Nominee
+    year: 2011
+  - title: RIT Academic Achievement Scholarship
+    year: 2010 -- 2011
+  # - title: Frank X. Lang Jr., Memorial Scholarship Recipient
+  #   year: 2007 -- 2011
+  # - title: William Swart Award Recipient
+  #   year: 2007 -- 2011
+
+activities:
+  - activity name
