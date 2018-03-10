@@ -1,48 +1,73 @@
 #!/usr/bin/env python3
 #
-# blog-posts.py
-# Counts the posts in my jekyll blog.
+# blog-info.py
+# Counts the posts in my jekyll blog and gets the top tags
 #
 # Brandon Amos
 # 2013.08.10
+# Updated by Rob Harrigan
+# 2018.03.09
 
 import operator
 import sys
-import urllib.request
-from bs4 import BeautifulSoup
 import re
 
-import html.parser; h = html.parser.HTMLParser()
+import requests
+from bs4 import BeautifulSoup
+import html.parser
+
+h = html.parser.HTMLParser()
+
 
 def getContent(url):
-  response = urllib.request.urlopen(url)
-  html = response.read().decode("utf8")
-  if not html: sys.exit(42)
-  return h.unescape(html)
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    page = requests.get(url)
+    html = page.text
+    if not html:
+        sys.exit(42)
+    return h.unescape(html)
 
-def numPostsFromArchives(archiveContent):
-  soup = BeautifulSoup(archiveContent)
-  mainCol = soup.find('div', attrs={'id': 'col1'})
-  return len(mainCol.find_all('li'))
+
+def numPostsFromArchives(baseURL):
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    page = requests.get(baseURL)
+    soup = BeautifulSoup(page.text, 'html5lib')
+    mainCol = soup.findAll('article')
+    nArticles = len(mainCol)
+    idx = 2
+    while True:
+        pageURL = "{}/page{}/".format(baseURL, idx)
+        page = requests.get(pageURL)
+        if page.status_code != requests.codes.ok:
+            break
+        soup = BeautifulSoup(page.text, 'html5lib')
+        mainCol = soup.findAll('article')
+        nArticles += len(mainCol)
+        idx += 1
+    return nArticles
+
 
 def parseTags(tagContent):
-  soup = BeautifulSoup(tagContent)
-  mainCol = soup.find('div', attrs={'id': 'col1'})
-  headers = mainCol.find_all('h3')
-  tags = {}
-  for header in headers:
-    tp = re.match("(\S*) - (\d*) Posts?", header.text)
-    tags[tp.group(1)] = int(tp.group(2))
+    soup = BeautifulSoup(tagContent, 'html5lib')
+    mainCol = soup.find('div', attrs={'class': 'archive'})
+    headers = mainCol.find_all('h2')
+    tags = {}
+    for header in headers:
+        if 'archive__subtitle' in dict(header.attrs)["class"]:
+            curr_tag = header.contents[0]
+        elif 'archive__item-title' in dict(header.attrs)["class"]:
+            tags[curr_tag] = tags.get(curr_tag, 0) + 1
 
-  sortedTags = sorted(tags.items(), key=operator.itemgetter(1), reverse=True)
-  return [x[0] for x in sortedTags]
+    sortedTags = sorted(tags.items(), key=operator.itemgetter(1), reverse=True)
+    return [x[0] for x in sortedTags]
+
 
 if __name__=='__main__':
-  archiveContent = getContent('http://Raab70.github.io/archives/')
-  tagContent = getContent('http://Raab70.github.io/tags/')
-  print(
-    "{} posts across the following tags, listed by highest frequency.".format(
-      numPostsFromArchives(archiveContent)
+    print(
+      "{} posts across the following tags, listed by highest frequency.".format(
+        numPostsFromArchives('https://unsupervisedpandas.com/')
+      )
     )
-  )
-  print(", ".join(parseTags(tagContent)))
+
+    tagContent = getContent('https://unsupervisedpandas.com/tags/')
+    print(", ".join(parseTags(tagContent)))

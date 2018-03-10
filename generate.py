@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.6
+#!/usr/bin/env python3
 
 """Generates LaTeX, markdown, and plaintext copies of my cv."""
 

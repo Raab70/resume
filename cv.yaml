@@ -108,7 +108,7 @@ projects:
       - Hosted on GitHub Pages. Uses {\bf Markdown} for posts and {\bf Jekyll}
           for static HTML generation.
       - Uses AWS Route53 for custom DNS resolution as well as Cloudflare CDN
-      - Includes posts on data science and data engineering topics including serverless, AWS Lambda, and Docker.
+      - Includes posts on data science and data engineering top tags include scikit-learn, AWS, Python, Apex, Docker, Lambda, Pandas and Data Engineering.
   - name: GitHub Portfolio
     url: http://github.com/Raab70
     details:
