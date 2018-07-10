@@ -39,12 +39,17 @@ order:
 #  - [activities, Activities]
 
 resume_order:
-  - [about, NONE]
+  - [objective, About Me]
   - [industry, Work Experience]
-  - [projects, Projects]
+  # - [projects, Projects]
   - [skills, Skills]
   - [education, Education]
 
+objective: '
+I am a machine learning engineer utilizing cutting edge cloud-native containerization
+architecture to deploy production quality machine learning models at CBS Interactive interfacing
+with brands like CBS.com, CBS News, CBS Sports and CBS All Access.
+'
 
 about: '
   I am a passionate data scientist who believes in data-driven decision making
@@ -53,23 +58,30 @@ about: '
   data science and data engineering,
   utilizing modern design patterns for cloud-based and
   containerized workflows to maximize data science impact.
-  I currently work for CBS Interactive and 247Sports.com
+  I currently work for CBS Interactive in the Applied Machine Learning Group
   <br>'
 
 industry:
+  - place: CBS Interactive -- Applied ML Group
+    location: Brentwood, Tennessee (Remote)
+    title: Senior Machine Learning Engineer
+    dates: Jul 2018 -- Present
+    details:
+      - Recommendation algorithm development and deployment to Kubernetes and GCP
   - place: CBS Interactive -- 247Sports.com
     location: Brentwood, Tennessee
     title: Data Engineer
-    dates: Apr 2017 -- Present
+    dates: Apr 2017 -- Jul 2018
     details:
       - Created serverless personalized recommendation engine using PySpark to get recommendations for >2 million users for a few dollars
       - Seamlessly moved analytics from custom PHP+MySQL application to AWS Kinesis streaming while maintaining business reporting
       - Created machine learning spam detection algorithm using Naive Bayes TF-IDF classifier, deployed to production
-      - Wrote chatbot to interface with analytics giving publishers real-time query insights into their page metrics
-      - Extended chatbot to work with goal based bonus incentive structure, allowing publishers to track goal progress in real-time
       - Created a serverless sessionization pipeline using AWS Lambda and AWS Elasticache (redis) to meet business needs of reporting session-level traffic metrics
-      - Field business reporting requests in a timely manner
-      - Interface with central Applied Machine Learning Group within broader CBSi working on recommendation algorithms and deployment to Kubernetes and GCP
+      - Wrote chatbot to interface with analytics giving publishers real-time query insights into their performance metrics
+      - Created custom serverless ETL pipeline of production data into BigQuery Data Warehouse for analysis.
+      # - Worked on multiple AWS Lambda backend services to power real-time updates to the site based on streaming analytics
+      # - Extended chatbot to work with goal based bonus incentive structure, allowing publishers to track goal progress in real-time
+      # - Field business reporting requests in a timely manner
   - place: Vanderbilt University Department of Electrical Engineering and Computer Science
     location: Nashville, Tennessee
     title: Graduate Research Assistant
@@ -77,13 +89,13 @@ industry:
     details:
       - Development of novel fully automated optic nerve segmentation, measurement algorithms in MATLAB
       - Deployment of algorithm using open source Python cluster manager (DAX) to process >11,000 clinical and research image volumes across self-maintained compute grid and university supercomputing resources
-  - place: Integrity Applications Inc.
-    location: Chantilly, Virginia
-    title: Imaging Science Intern
-    dates: Jun 2010 -- Aug 2010 and Jun 2012 -- Aug 2012
-    details:
-      - Multi-scale target detection algorithm design utilizing low spatial resolution (30m-250m) multispectral and high spatial resolution imagery (15m) to improve detection results using IDL/ENVI and Perl
-      - Cloud detection and mosaicking for application of algorithms for generation of large-scale deliverable maps
+  # - place: Integrity Applications Inc.
+  #   location: Chantilly, Virginia
+  #   title: Imaging Science Intern
+  #   dates: Jun 2010 -- Aug 2010 and Jun 2012 -- Aug 2012
+  #   details:
+  #     - Multi-scale target detection algorithm design utilizing low spatial resolution (30m-250m) multispectral and high spatial resolution imagery (15m) to improve detection results using IDL/ENVI and Perl
+  #     - Cloud detection and mosaicking for application of algorithms for generation of large-scale deliverable maps
   # - place: Goodrich Corporation
   #   location: Westford, Massachusetts
   #   title: Imaging Science Coop
@@ -92,8 +104,20 @@ industry:
   #     - Ongoing image quality analysis program development for multiple in-theatre and development sensors including geolocational accuracy, NIIRs assessment and maintenance scheduling.
 
 news:
+  - date: Aug 2018
+    info: "I will be presenting \"Serverless Streaming Web Analytics with AWS Kinesis and Lambda\" at the Nashville Analytics Summit. "
+  - date: Mar 2018
+    info: "I presented \"Building a Serverless Recommendation Engine\" at the
+    <a href=https://www.meetup.com/Brentwood-Artificial-Intelligence-Meetup/events/245466094/>Brentwood Artificial Intelligence meetup</a>
+    discussing how to use AWS Lambda and PySpark on AWS ElasticMapReduce using collaborative filtering
+    to generate personalized recommendations for millions of users for just a few dollars."
+  - date: Feb 2018
+    info: "I attended PyTennessee 2018 in Nashville, Tennessee"
   - date: Nov 2017
     info: "I attended AWS re:Invent 2017 in Las Vegas, Nevada"
+  - date: Jul 2017
+    info: "I presented my work integrating our custom analytics with
+    Splunk into our chatbot for on-demand analytics queries by our publishers at the Splunk Nashville Users Group."
   - date: Apr 2017
     info: "I began working at 247Sports.com at CBS Interactive"
   - date: Mar 2017
@@ -124,11 +148,11 @@ projects:
 
 skills:
   - title: Languages
-    details: Python, Bash, terraform, chef, Ruby, SQL
+    details: Python, Bash, terraform, SQL
   - title: Frameworks
-    details: NumPy, Pandas, matplotlib, seaborn, scikit-learn, SciPy, TensorFlow
+    details: Flask, NumPy, Pandas, PySpark, matplotlib, scikit-learn, TensorFlow
   - title: Technologies
-    details: Kubernetes, Docker, AWS, Google Cloud
+    details: Kubernetes, Containerization, AWS, Google Cloud, microservice architecture
 
 
 education:
