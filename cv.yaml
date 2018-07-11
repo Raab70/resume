@@ -108,7 +108,7 @@ news:
     info: "I will be presenting \"Serverless Streaming Web Analytics with AWS Kinesis and Lambda\" at the Nashville Analytics Summit. "
   - date: Mar 2018
     info: "I presented \"Building a Serverless Recommendation Engine\" at the
-    <a href=https://www.meetup.com/Brentwood-Artificial-Intelligence-Meetup/events/245466094/>Brentwood Artificial Intelligence meetup</a>
+    <a href='https://www.meetup.com/Brentwood-Artificial-Intelligence-Meetup/events/245466094/'>Brentwood Artificial Intelligence meetup</a>
     discussing how to use AWS Lambda and PySpark on AWS ElasticMapReduce using collaborative filtering
     to generate personalized recommendations for millions of users for just a few dollars."
   - date: Feb 2018
