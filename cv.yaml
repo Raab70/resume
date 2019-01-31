@@ -45,12 +45,13 @@ resume_order:
   - [skills, Skills]
   - [education, Education]
 
+# FYI This is resume-only!
 objective: '
 I am a machine learning engineer utilizing cutting edge cloud-native containerization
 architecture to deploy production quality machine learning models at CBS Interactive interfacing
-with brands like CBS.com, CBS News, CBS Sports and CBS All Access.
+with brands like CNET, CBS.com, CBS News, CBS Sports and CBS All Access.
 '
-
+# This goes on my website and CV
 about: '
   I am a passionate data scientist who believes in data-driven decision making
   and empowering executives with actionable facts.
@@ -67,7 +68,12 @@ industry:
     title: Senior Machine Learning Engineer
     dates: Jul 2018 -- Present
     details:
-      - Recommendation algorithm development and deployment to Kubernetes and GCP
+      - "Recommendations product lead: Recommendation algorithm development, deployment and production monitoring on Kubernetes and GCP for multiple brands including CNET, CBS News, CBS Sports and CBS All Access"
+      - Created scalable deep learning based content-to-content recommendations platform utilizing a distributed celery queue to rapidly ingest and recommend content
+      - Designed serverless ALS collaborative filtering recommendations platform using Google Cloud Dataproc
+      - Created high availability and scalable generic recommendation selection and serving API run on Kubernetes
+      # - Created recommendation performance monitoring system
+      - Lead policy implementations surrounding monitoring, alerting, CI/CD, testing, Git, Jira workflow and Kanban migration
   - place: CBS Interactive -- 247Sports.com
     location: Brentwood, Tennessee
     title: Data Engineer
@@ -77,18 +83,17 @@ industry:
       - Seamlessly moved analytics from custom PHP+MySQL application to AWS Kinesis streaming while maintaining business reporting
       - Created machine learning spam detection algorithm using Naive Bayes TF-IDF classifier, deployed to production
       - Created a serverless sessionization pipeline using AWS Lambda and AWS Elasticache (redis) to meet business needs of reporting session-level traffic metrics
-      - Wrote chatbot to interface with analytics giving publishers real-time query insights into their performance metrics
+      # - Wrote chatbot to interface with analytics giving publishers real-time query insights into their performance metrics
       - Created custom serverless ETL pipeline of production data into BigQuery Data Warehouse for analysis.
       # - Worked on multiple AWS Lambda backend services to power real-time updates to the site based on streaming analytics
       # - Extended chatbot to work with goal based bonus incentive structure, allowing publishers to track goal progress in real-time
       # - Field business reporting requests in a timely manner
-  - place: Vanderbilt University Department of Electrical Engineering and Computer Science
-    location: Nashville, Tennessee
-    title: Graduate Research Assistant
-    dates: Aug 2014 -- Mar 2017
-    details:
-      - Development of novel fully automated optic nerve segmentation, measurement algorithms in MATLAB
-      - Deployment of algorithm using open source Python cluster manager (DAX) to process >11,000 clinical and research image volumes across self-maintained compute grid and university supercomputing resources
+  # - place: Vanderbilt University Department of Electrical Engineering and Computer Science
+  #   location: Nashville, Tennessee
+  #   title: Graduate Research Assistant
+  #   dates: Aug 2014 -- Mar 2017
+  #   details:
+  #     - Development and deployment of a novel fully automated optic nerve segmentation algorithm using open source Python tools to process >11,000 clinical and research image volumes across self-maintained compute grid and university supercomputing resources
   # - place: Integrity Applications Inc.
   #   location: Chantilly, Virginia
   #   title: Imaging Science Intern
@@ -104,8 +109,12 @@ industry:
   #     - Ongoing image quality analysis program development for multiple in-theatre and development sensors including geolocational accuracy, NIIRs assessment and maintenance scheduling.
 
 news:
+  - date: Apr 2019
+    info: I will be speaking at Google Next 2019 in San Francisco, California
   - date: Aug 2018
-    info: "I will be presenting \"Serverless Streaming Web Analytics with AWS Kinesis and Lambda\" at the Nashville Analytics Summit. "
+    info: "I will be presenting \"Serverless Streaming Web Analytics with AWS Kinesis and Lambda\" at the Nashville Analytics Summit and Nashville AWS users group meetup"
+  - date: Jul 2018
+    info: "I was promoted to Senior Machine Learning Engineer in the Applied Machine Learning Group within CBS Interactive."
   - date: Mar 2018
     info: "I presented \"Building a Serverless Recommendation Engine\" at the
     <a href='https://www.meetup.com/Brentwood-Artificial-Intelligence-Meetup/events/245466094/'>Brentwood Artificial Intelligence meetup</a>
@@ -150,9 +159,11 @@ skills:
   - title: Languages
     details: Python, Bash, terraform, SQL
   - title: Frameworks
-    details: Flask, NumPy, Pandas, PySpark, matplotlib, scikit-learn, TensorFlow
+    details: Django, NumPy, Pandas, matplotlib, scikit-learn, Celery, Flask, TensorFlow, PySpark,
   - title: Technologies
     details: Kubernetes, Containerization, AWS, Google Cloud, microservice architecture
+  - title: ML Topics
+    details: NLP, image segmentation, classification, collaborative filtering
 
 
 education:
