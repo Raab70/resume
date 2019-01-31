@@ -84,7 +84,7 @@ industry:
       - Created machine learning spam detection algorithm using Naive Bayes TF-IDF classifier, deployed to production
       - Created a serverless sessionization pipeline using AWS Lambda and AWS Elasticache (redis) to meet business needs of reporting session-level traffic metrics
       # - Wrote chatbot to interface with analytics giving publishers real-time query insights into their performance metrics
-      - Created custom serverless ETL pipeline of production data into BigQuery Data Warehouse for analysis.
+      - Created custom serverless ETL pipeline of production data into BigQuery for analysis
       # - Worked on multiple AWS Lambda backend services to power real-time updates to the site based on streaming analytics
       # - Extended chatbot to work with goal based bonus incentive structure, allowing publishers to track goal progress in real-time
       # - Field business reporting requests in a timely manner
