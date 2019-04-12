@@ -27,15 +27,15 @@ order:
   - [news, News]
   # - [NEWPAGE, NEWPAGE]  # Ignore newpages since we're just using the markdown for the site
   - [industry, Work Experience]
-  - [projects, Projects]
+  # - [projects, Projects]
   - [skills, Skills]
 
   - [education, Education]
-  - [selected_publications, Selected Publications]
+  # - [selected_publications, Selected Publications]
   - [honors, Honors \& Awards]
-
+  - [talks, Speaking Engagements]
   - [teaching, Teaching Experience]
-  - [all_publications, All Publications]
+  - [all_publications, Publications]
 #  - [activities, Activities]
 
 resume_order:
@@ -110,7 +110,7 @@ industry:
 
 news:
   - date: Apr 2019
-    info: I will be speaking at Google Next 2019 in San Francisco, California
+    info: "I presented \"A Glimpse into CBS Interactive's AI/ML Group\" at Google Next 2019 in San Francisco, California <a href='https://youtu.be/hX71H78UYAc'>Available on YouTube</a>"
   - date: Aug 2018
     info: "I will be presenting \"Serverless Streaming Web Analytics with AWS Kinesis and Lambda\" at the Nashville Analytics Summit and Nashville AWS users group meetup"
   - date: Jul 2018
@@ -205,7 +205,7 @@ selected_publications:
   file: selected.bib
 
 all_publications:
-  name: "R. Harrigan"
+  name: "Robert L Harrigan"
   categories:
     - heading: Journal Articles
       prefix: J
@@ -216,6 +216,23 @@ all_publications:
     - heading: Posters
       prefix: S
       file: posters.bib
+
+talks:
+  - title: A Glimpse into CBS Interactive's AI/ML Group
+    date: Apr 2019
+    loc: Google Next '19
+  - title: Serverless Streaming Web Analytics with AWS Kinesis and Lambda
+    date: Aug 2018
+    loc: Nashville Analytics Summit
+  - title: Serverless Streaming Web Analytics with AWS Kinesis and Lambda
+    date: Aug 2018
+    loc: Nashville AWS Meetup
+  - title: Building a Serverless Recommendation Engine
+    date: Mar 2018
+    loc: Brentwood AI Meetup
+  - title: On-demand analytics for publishers using a splunk powered chatbot
+    date: Apr 2017
+    loc: Nashville Splunk User Group
 
 honors:
   - title: NEI T32 Training Grant Award

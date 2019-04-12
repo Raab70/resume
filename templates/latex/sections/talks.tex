@@ -1,0 +1,14 @@
+~< extends "section.tex" >~
+
+~< block body >~
+\begin{itemize}
+  ~< for talk in items >~
+    \item << talk.title >> \\ \textit{<< talk['loc'] >>} \hfill << talk['date'] >>
+    ~< if talk.descr >~
+      \begin{itemize}
+      \item << talk.descr >>
+      \end{itemize}
+    ~< endif >~
+  ~< endfor >~
+\end{itemize}
+~< endblock body >~

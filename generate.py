@@ -68,8 +68,11 @@ def get_pub_md(context, config):
         #     title = "<a href=\'{}\'>{}</a>".format(
         #         pub['link'], title)
         title = title.replace("\n", " ")
-
+        if "_venue" not in pub or "year" not in pub:
+            print(pub)
         assert('_venue' in pub and 'year' in pub)
+        if "\\" in pub['year']:
+            pub['year'] = re.sub(r"\\noop\d+", "", pub['year'])
         yearVenue = "{} {}".format(pub['_venue'], pub['year'])
 
         imgStr = '<img src="/assets/images/{}.png" height="150" width="150"/>'.format(pub['ID'])
@@ -255,7 +258,7 @@ class RenderContext(object):
                 section_data['items'] = section_content
             elif section_tag in ['coursework', 'education', 'honors',
                                  'industry', 'research',
-                                 'skills', 'teaching', 'projects']:
+                                 'skills', 'teaching', 'projects', 'talks']:
                 section_data['items'] = section_content
                 section_template_name = os.path.join(
                     self.SECTIONS_DIR, section_tag + self._file_ending)
