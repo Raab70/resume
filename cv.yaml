@@ -65,27 +65,36 @@ about: '
 industry:
   - place: CBS Interactive -- Applied ML Group
     location: Brentwood, Tennessee (Remote)
-    title: Senior Machine Learning Engineer
-    dates: Jul 2018 -- Present
+    title: Lead Machine Learning Engineer
+    dates: Apr 2019 -- Present
     details:
-      - "Recommendations product lead: Recommendation algorithm development, deployment and production monitoring on Kubernetes and GCP for multiple brands including CNET, CBS News, CBS Sports and CBS All Access"
+      - Lead a team of machine learning engineers working on recommendations and video processing
+      - Spearhead new ML product opportunities including HLS live-stream processing and deep personalization of CBS All Access utilizing Django Rest Framework to rapidly iterate on self-documenting PoCs.
+      - Work with brands to define recommendation products and integrations
+      - Promote ops best practices including helm chart authoring, owning of prometheus/grafana monitoring infrastructure and management of 6 production Kubernetes clusters running dozens of microservices.
+
+  - place: CBS Interactive -- Applied ML Group
+    location: Brentwood, Tennessee (Remote)
+    title: Senior Machine Learning Engineer
+    dates: Jul 2018 -- Mar 2019
+    details:
+      - "Search and recommendations product lead: algorithm development, deployment and monitoring for multiple brands including CNET, TV Guide, Metacritic, CBS Sports and CBS All Access"
       - Created scalable deep learning based content-to-content recommendations platform utilizing a distributed celery queue to rapidly ingest and recommend content
-      - Designed serverless ALS collaborative filtering recommendations platform using Google Cloud Dataproc
-      - Created high availability and scalable generic recommendation selection and serving API run on Kubernetes
-      # - Created recommendation performance monitoring system
+      - Designed serverless ALS collaborative filtering recommendations platform using Google Cloud Dataproc which went on to be the most clicked-on carousel on the CBS All Access homepage
+      - Created highly available and scalable generic recommendation selection and serving API run on Kubernetes serving 1 million recommendations per day
       - Lead policy implementations surrounding monitoring, alerting, CI/CD, testing, Git, Jira workflow and Kanban migration
   - place: CBS Interactive -- 247Sports.com
     location: Brentwood, Tennessee
     title: Data Engineer
     dates: Apr 2017 -- Jul 2018
     details:
-      - Created serverless personalized recommendation engine using PySpark to get recommendations for >2 million users for a few dollars
       - Seamlessly moved analytics from custom PHP+MySQL application to AWS Kinesis streaming while maintaining business reporting
+      - Worked on multiple AWS Lambda backend services to power real-time updates to the site based on streaming analytics
+      - Created serverless personalized recommendation engine using PySpark to get recommendations for >2 million users for a few dollars
       - Created machine learning spam detection algorithm using Naive Bayes TF-IDF classifier, deployed to production
       - Created a serverless sessionization pipeline using AWS Lambda and AWS Elasticache (redis) to meet business needs of reporting session-level traffic metrics
+      - Created a serverless ETL pipeline of production data from application tables into BigQuery for analysis
       # - Wrote chatbot to interface with analytics giving publishers real-time query insights into their performance metrics
-      - Created custom serverless ETL pipeline of production data into BigQuery for analysis
-      # - Worked on multiple AWS Lambda backend services to power real-time updates to the site based on streaming analytics
       # - Extended chatbot to work with goal based bonus incentive structure, allowing publishers to track goal progress in real-time
       # - Field business reporting requests in a timely manner
   # - place: Vanderbilt University Department of Electrical Engineering and Computer Science
@@ -109,10 +118,16 @@ industry:
   #     - Ongoing image quality analysis program development for multiple in-theatre and development sensors including geolocational accuracy, NIIRs assessment and maintenance scheduling.
 
 news:
+  - date: Mar 2020
+    info: "I will be presenting \"<a href='https://2020.pytennessee.org/talks/deploying-machine-learning-models-with-flask-and-docker'>Deploying Machine Learning Models with Flask and Docker</a>\" at PyTennessee 2020"
+  - date: Oct 2019
+    info: I attended ODSC West 2019 in San Francisco, California
+  - date: Apr 2019
+    info: I was promoted to Lead Machine Learning Engineer in the Applied Machine Learning Group within CBS Interactive
   - date: Apr 2019
     info: "I presented \"A Glimpse into CBS Interactive's AI/ML Group\" at Google Next 2019 in San Francisco, California <a href='https://youtu.be/hX71H78UYAc'>Available on YouTube</a>"
   - date: Aug 2018
-    info: "I will be presenting \"Serverless Streaming Web Analytics with AWS Kinesis and Lambda\" at the Nashville Analytics Summit and Nashville AWS users group meetup"
+    info: "I presented \"Serverless Streaming Web Analytics with AWS Kinesis and Lambda\" at the Nashville Analytics Summit and Nashville AWS users group meetup"
   - date: Jul 2018
     info: "I was promoted to Senior Machine Learning Engineer in the Applied Machine Learning Group within CBS Interactive."
   - date: Mar 2018
@@ -159,9 +174,9 @@ skills:
   - title: Languages
     details: Python, Bash, terraform, SQL
   - title: Frameworks
-    details: Django, NumPy, Pandas, matplotlib, scikit-learn, Celery, Flask, TensorFlow, PySpark,
+    details: Django, NumPy, Pandas, matplotlib, scikit-learn, Celery, Flask, TensorFlow, PySpark
   - title: Technologies
-    details: Kubernetes, Containerization, AWS, Google Cloud, microservice architecture
+    details: Kubernetes, Containerization, Google Cloud, microservice architecture, redis, prometheus, grafana, rabbitmq
   - title: ML Topics
     details: NLP, image segmentation, classification, collaborative filtering
 
